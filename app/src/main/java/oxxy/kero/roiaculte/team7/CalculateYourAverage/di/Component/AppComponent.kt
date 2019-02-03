@@ -4,6 +4,7 @@ import dagger.Component
 import dagger.android.AndroidInjectionModule
 import dagger.android.AndroidInjector
 import oxxy.kero.roiaculte.team7.CalculateYourAverage.AndroidApplication
+import oxxy.kero.roiaculte.team7.CalculateYourAverage.Firebase.FirebaseModule
 import oxxy.kero.roiaculte.team7.CalculateYourAverage.ui.ActivitysBuilder
 import oxxy.kero.roiaculte.team7.CalculateYourAverage.di.Module.AppModule
 import oxxy.kero.roiaculte.team7.CalculateYourAverage.di.viewmodel.ViewModelModule
@@ -26,6 +27,7 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [AndroidInjectionModule::class,
                        ActivitysBuilder::class,
+                      FirebaseModule::class,
                         AppModule::class,
                         ViewModelModule::class])
 interface AppComponent : AndroidInjector<AndroidApplication> {
