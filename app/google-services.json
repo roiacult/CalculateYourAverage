@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "710968560920",
+    "firebase_url": "https://calcmoy-5e7e3.firebaseio.com",
+    "project_id": "calcmoy-5e7e3",
+    "storage_bucket": "calcmoy-5e7e3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:710968560920:android:4f6f88377fbd3ed5",
+        "android_client_info": {
+          "package_name": "oxxy.kero.roiaculte.team7.CalculateYourAverage"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "710968560920-cspq8n9ddd5q993kh65edoeqp62uuba1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "oxxy.kero.roiaculte.team7.CalculateYourAverage",
+            "certificate_hash": "440da718d77aa53c20e45f701f0bc0c4db48a505"
+          }
+        },
+        {
+          "client_id": "710968560920-mpuiejv8tk64t73v6vvmmsvd1o0tdh6m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBViLcW78SKvZ__CPYXlzI7rw6zxRnFjM0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "710968560920-mpuiejv8tk64t73v6vvmmsvd1o0tdh6m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
