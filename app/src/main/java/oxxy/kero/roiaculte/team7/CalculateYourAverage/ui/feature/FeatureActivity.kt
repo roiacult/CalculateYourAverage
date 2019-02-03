@@ -1,4 +1,4 @@
-package oxxy.kero.roiaculte.team7.CalculateYourAverage.Ui.feature
+package oxxy.kero.roiaculte.team7.CalculateYourAverage.ui.feature
 
 import oxxy.kero.roiaculte.team7.CalculateYourAverage.base.BaseActivity
 

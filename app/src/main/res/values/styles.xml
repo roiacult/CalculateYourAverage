@@ -20,7 +20,6 @@
     <!--splash screen theme-->
     <style name="AppTheme.NoActionBar.Launcher">
         <item name="android:windowBackground">@drawable/splash_screen</item>
-        <item name="android:windowFullscreen">true</item>
     </style>
 
 

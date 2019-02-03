@@ -1,4 +1,4 @@
-package oxxy.kero.roiaculte.team7.CalculateYourAverage.Ui.feature.fragment1
+package oxxy.kero.roiaculte.team7.CalculateYourAverage.ui.feature.fragment1
 
 import dagger.android.support.DaggerFragment
 

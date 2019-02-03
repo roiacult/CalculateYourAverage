@@ -14,7 +14,9 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme"
             android:name="oxxy.kero.roiaculte.team7.CalculateYourAverage.AndroidApplication">
-        <activity android:name="oxxy.kero.roiaculte.team7.CalculateYourAverage.MainActivity">
+        <activity android:name=".ui.splash_screen.SplashScreen"
+                  android:theme="@style/AppTheme.NoActionBar.Launcher"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
