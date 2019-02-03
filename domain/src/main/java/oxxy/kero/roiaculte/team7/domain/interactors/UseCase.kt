@@ -23,11 +23,13 @@ import oxxy.kero.roiaculte.team7.domain.functional.Either
 
 interface EitherInteractor<in P, out R> {
     val dispatcher: CoroutineDispatcher
+    val ResultDispatcher :CoroutineDispatcher
     suspend operator fun invoke(executeParams: P):Either<Failure, R>
 }
 
 interface Interactor<in P>{
     val  dispatcher: CoroutineDispatcher
+    val ResultDispatcher :CoroutineDispatcher
     suspend operator fun invoke(executeParams: P)
 }
 
@@ -46,15 +48,16 @@ abstract class ObservableInteractor<Type , in Params>(private val schedulers:App
 }
 
 fun <P, R> CoroutineScope.launchInteractor(interactor: EitherInteractor<P,R >, param: P , OnResult:(Either<Failure, R>)->Unit): Job {
-   val  job = async { interactor(param) }
-    return launch(interactor.dispatcher) { OnResult(job.await()) }
+    val  job = async(interactor.dispatcher) { interactor(param) }
+    return launch(interactor.ResultDispatcher) { OnResult(job.await()) }
 }
 class None
 
 
 fun <P> CoroutineScope.launchInteractor(interactor:Interactor<P>, param: P, onResult:()->Unit):Job{
-    return launch (interactor.dispatcher){ interactor(param)
-                        onResult()}
+    val job = async(context = interactor.dispatcher){interactor(param)}
+    return launch (interactor.ResultDispatcher){ job.await()
+        onResult()}
 
 }
 fun  <R>CoroutineScope.launchInteractor(interactor: EitherInteractor<Unit, R>, OnResult: (Either<Failure, R>) -> Unit) =
