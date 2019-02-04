@@ -12,8 +12,4 @@ abstract class FirebaseModule {
         return FirebaseAuth.getInstance()
     }
 
-
-
-
-
 }
